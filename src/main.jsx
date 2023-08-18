@@ -2,10 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-//import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Login } from './pages/login.jsx';
 import { ErrorPage } from './pages/ErrorPage.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Usuários } from './pages/Usuários.jsx';
+import { Cadastro } from './pages/Cadastro.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -14,8 +16,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
   },
   {
-    path: "/Login",
+    path: "/login",
     element: <Login/>,
+  },
+  {
+    path: "/usuários",
+    element: <Usuários/>,
+  },
+  {
+    path: "/cadastro",
+    element: <Cadastro/>,
   },
 ]);
 
